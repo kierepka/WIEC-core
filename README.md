@@ -2,6 +2,12 @@
 
 **A safety-gated, evidence-first framework for collective agent reasoning.**
 
+**WIEC — Wiec Inteligencji, Eksploracji i Ciekawości.**
+English: **A Council of Intelligence, Exploration and Curiosity**.
+The Polish word *wiec* evokes an assembly: many voices, shared inquiry and room
+for disagreement. The acronym remains Polish in English materials.
+[Name and Polish introduction](docs/START_PL.md).
+
 > Status: experimental reference implementation, v0.1.0-alpha. Not production-safe.
 > WIEC is a working name; trademark and domain clearance are not complete.
 
@@ -56,6 +62,27 @@ python examples/basic_council.py
 ```
 
 Python 3.11+. No external model calls, network requests or credentials required.
+
+## Documentation and research materials
+
+Start with the [documentation index](docs/README.md),
+[vision](docs/VISION.md), [architecture](docs/ARCHITECTURE.md),
+[contracts](docs/CONTRACTS.md) and [Research Council protocol](docs/RESEARCH_COUNCIL.md).
+The [agent constitution](docs/AGENT_CONSTITUTION.md),
+[knowledge lifecycle](docs/KNOWLEDGE.md), [safety design](docs/SAFETY.md) and
+[evaluation protocol](docs/EVALUATION.md) define the intended development boundaries.
+
+Google ADK and Microsoft Agent Framework are priority runtime candidates;
+LangGraph, OpenAI Agents SDK and CrewAI are documented alternatives.
+See [integration strategy](docs/integrations/RUNTIMES.md).
+These are integration designs, not implemented adapters.
+
+The [quantum research track](docs/quantum/README.md) includes foundations, hybrid
+architecture, simulator/QPU access options and baseline-controlled experiments.
+The [annotated reading list](docs/research/READING_LIST.md) explains where each
+source comes from, why it matters, how WIEC would use it and what it cannot prove.
+[Traceability](docs/research/TRACEABILITY.md) connects sources to design decisions.
+No quantum backend or provider account is connected, and no quantum advantage is claimed.
 
 ## Repository map
 

@@ -1,5 +1,55 @@
 # Architecture and trust boundaries
 
+Status: current core plus proposed target architecture, 2026-11-25.
+See the [documentation index](README.md) for requirements and implementation gates.
+
+## What exists today
+
+`model.py` defines local dataclasses; `council.py` validates selected references
+and retains inputs; `safety.py` denies external/physical effects in a demonstration
+policy. Eight unit tests and a deterministic example exercise this small surface.
+There are no runtime adapters, storage services, live agents, QPU connections,
+authorization server or executor. Documentation below is a design, not deployed infrastructure.
+
+## Target components
+
+The intake service freezes question, source permissions, budget and run identity.
+The source registry and knowledge service provide versioned evidence. The runtime
+adapter schedules perspective, critic and integration stages. Domain validators
+admit records into the epistemic graph. Report assembly produces an inspectable
+argument and unresolved questions, independent of permission to execute anything.
+
+The independent policy/gateway path authorizes concrete effects. A credential
+broker supplies scoped secrets only to the executor. The execution ledger records
+decisions and outcomes; observability exports redacted metrics and trace references.
+A future quantum adapter sits behind the same gateway as other remote computation.
+
+## Ownership of state and dependencies
+
+The WIEC event/artifact model is the portable source of run provenance. Runtime
+sessions/checkpoints contain execution state and references to it, not a second
+uncontrolled truth store. Separate per-perspective contexts precede the exchange
+round. Resume reconstructs from stored artifacts and reconciles remote jobs;
+it does not resubmit effects blindly.
+
+Dependency direction: adapters depend on WIEC contracts; core contracts do not
+depend on Google ADK, Microsoft Agent Framework, LangGraph or quantum SDKs.
+SDKs belong in future optional integration packages. No SDK is added by this documentation.
+
+## Deployment progression
+
+1. Alpha: local pure-Python objects and deterministic tests, implemented.
+2. M1: local orchestrator plus recorded or explicitly permitted model calls;
+   externally effecting tools remain absent. Start by evaluating Google ADK and
+   Microsoft Agent Framework against one conformance suite.
+3. M2: isolated agent workers, independent gateway, artifact/event store,
+   authenticated approvals and secrets restricted to executors.
+4. Research: a bounded simulator adapter; later, an explicitly authorized remote
+   QPU adapter only after effect/budget controls pass their gates.
+
+Do not make orchestration selection a dependency on a single cloud or QPU vendor.
+See [runtime integration strategy](integrations/RUNTIMES.md).
+
 ## Bounded context
 
 **Epistemic layer:** `AgentPerspective`, `Claim`, `Evidence`, `Challenge`,
@@ -11,7 +61,8 @@ to be added.
 Prototype `SafetyPolicy` denies external writes and physical effects
 unconditionally, even if approval flags are set. No action executor exists.
 
-**Runtime adapter:** LangGraph is a candidate default for orchestration,
+**Runtime adapter:** Google ADK and Microsoft Agent Framework are priority candidates;
+LangGraph remains an alternative for orchestration,
 not a dependency of the epistemic or safety models. Microsoft Agent Framework
 and Google ADK may be evaluated as adapters. This is a design choice, not a
 claim of compatibility already implemented.
