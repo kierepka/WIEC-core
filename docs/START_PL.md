@@ -27,7 +27,9 @@ Wspólna odpowiedź nie daje automatycznie prawa do wykonania działania.
 
 Pierwszy produkt to Research Council: trzy perspektywy, etap falsyfikacji,
 integracja i raport. Osobny mechanizm ma kontrolować koszty, narzędzia i skutki
-zewnętrzne. Dzisiaj działa wyłącznie mały lokalny prototyp kontraktów i polityki.
+zewnętrzne. Dzisiaj działa mały prototyp kontraktów i polityki oraz przenośny agent
+lokalny z zapisem JSON i uruchamianiem w ADK/Microsoft. Pełna rada i modele LLM
+pozostają do wdrożenia. [Działający zakres przenośności](PORTABILITY.md).
 
 ## Co oznacza część kwantowa?
 

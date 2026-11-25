@@ -1,7 +1,10 @@
 # Google ADK integration design
 
-Status: proposed; no runnable ADK adapter exists. Use a version-pinned spike before
-publishing SDK-specific examples. Reviewed official documentation on 2026-11-25.
+Status: a native offline custom-agent host is implemented and tested with ADK
+2.15.1. It uses `BaseAgent`, `Runner`, events and a fresh in-memory session to run
+the portable WIEC agent. Full Council scheduling and live models remain proposed.
+See [installation, runnable example and boundaries](../PORTABILITY.md).
+Reviewed official documentation on 2026-11-25.
 
 ## Mapping
 

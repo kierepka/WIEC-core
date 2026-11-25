@@ -75,7 +75,9 @@ The [agent constitution](docs/AGENT_CONSTITUTION.md),
 Google ADK and Microsoft Agent Framework are priority runtime candidates;
 LangGraph, OpenAI Agents SDK and CrewAI are documented alternatives.
 See [integration strategy](docs/integrations/RUNTIMES.md).
-These are integration designs, not implemented adapters.
+The bounded offline [ADK/Microsoft single-agent hosts](docs/PORTABILITY.md) are
+implemented; the other adapters, full Council orchestration and live provider
+integration remain planned.
 
 The [quantum research track](docs/quantum/README.md) includes foundations, hybrid
 architecture, simulator/QPU access options and baseline-controlled experiments.
@@ -99,7 +101,10 @@ No quantum backend or provider account is connected, and no quantum advantage is
 This **is** a small reference implementation to validate the vocabulary and
 policy checks. It is **not** an operational multi-agent framework, independent
 Safety Kernel, or a certified non-harm system. No LLM adapter, RAG, persistence,
-tool execution, runtime orchestration or distributed isolation is present.
+tool execution, multi-stage Council orchestration or distributed isolation is present.
+The implemented portability foundation additionally supports versioned agent
+contracts, validated local JSON checkpoints and native offline hosting on Google
+ADK/Microsoft Agent Framework. It does not add live LLM or quantum computation.
 
 ## Benchmark plan
 

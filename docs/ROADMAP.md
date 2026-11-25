@@ -7,7 +7,10 @@
 - [x] Unit tests and runnable example
 
 ## M1 — Research Council MVP
-- [ ] Versioned schemas, validators and recorded perspective fixtures
+- [x] Versioned single-agent checkpoint contract and strict validation
+- [x] SDK-free backend/host ports and local/native ADK/Microsoft offline hosts
+- [x] Cross-host checkpoint transfer, failure and cancellation conformance tests
+- [ ] Council event/report schemas and recorded perspective fixtures
 - [ ] Compare Google ADK and Microsoft Agent Framework conformance spikes
 - [ ] Select one runtime adapter by ADR; keep LangGraph as an alternative
 - [ ] Three genuinely differentiated perspective agents

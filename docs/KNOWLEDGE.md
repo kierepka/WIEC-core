@@ -1,6 +1,8 @@
 # Knowledge, evidence and memory
 
-Status: proposed design; the alpha stores only in-memory objects supplied by callers.
+Status: proposed knowledge-store design. The alpha uses caller-supplied domain
+records and now has local JSON invocation checkpoints, but no source registry,
+retrieval index or persistent epistemic graph service.
 
 ## Three stores with different authority
 

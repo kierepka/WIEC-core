@@ -3,6 +3,13 @@
 Status: current Python objects plus a proposed transport design. Proposed fields
 below do not exist in the current package unless explicitly identified.
 
+The bounded agent invocation/checkpoint contract is now implemented in
+`wiec.portable`: `AgentManifest`, `AgentRequest`, `AgentOutput`, `AgentState`,
+`AgentBackend`, `AgentHost`, `PortableAgent` and `JsonStateStore`.
+See [portable API, examples and limits](PORTABILITY.md). Its schema version 1 is
+a checkpoint schema, not the proposed event envelope below. The strict portable
+boundary validates records; the original core dataclasses remain lightweight.
+
 ## Implemented Python surface
 
 `Evidence(id, source, description)` records a reference, without retrieving or

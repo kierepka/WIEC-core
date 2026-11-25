@@ -5,7 +5,9 @@ English: **A Council of Intelligence, Exploration and Curiosity**.
 
 This documentation describes the present prototype and a proposed development
 architecture. A design document is not evidence that its components are implemented.
-The only executable implementation is currently the small Python core in `src/wiec/`.
+The executable implementation includes the small Python domain core, versioned
+portable agent/checkpoint contracts, and local/native ADK/Microsoft offline hosts.
+Live model calls and the full Research Council workflow remain unimplemented.
 
 ## Start here
 
@@ -14,6 +16,7 @@ The only executable implementation is currently the small Python core in `src/wi
 - [Project glossary](GLOSSARY.md)
 - [Architecture and implementation status](ARCHITECTURE.md)
 - [Domain contracts and proposed interfaces](CONTRACTS.md)
+- [Implemented portable agents and native hosting adapters](PORTABILITY.md)
 - [Research Council protocol](RESEARCH_COUNCIL.md)
 - [Agent constitution](AGENT_CONSTITUTION.md)
 - [Knowledge, evidence and memory](KNOWLEDGE.md)

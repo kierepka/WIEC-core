@@ -1,6 +1,9 @@
 # Microsoft agent ecosystem integration design
 
-Status: proposed adapter; not installed, deployed or verified in this repository.
+Status: a native offline `BaseAgent` host returning SDK `AgentResponse` is implemented
+and tested with `agent-framework-core` 1.26.0. No hosted model, cloud deployment,
+streaming or full Council workflow is implemented.
+See [installation, runnable example and boundaries](../PORTABILITY.md).
 Sources reviewed 2026-11-25.
 
 ## Agent Framework

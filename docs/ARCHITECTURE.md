@@ -7,9 +7,13 @@ See the [documentation index](README.md) for requirements and implementation gat
 
 `model.py` defines local dataclasses; `council.py` validates selected references
 and retains inputs; `safety.py` denies external/physical effects in a demonstration
-policy. Eight unit tests and a deterministic example exercise this small surface.
-There are no runtime adapters, storage services, live agents, QPU connections,
-authorization server or executor. Documentation below is a design, not deployed infrastructure.
+policy. The original eight unit tests and a deterministic example exercise this surface.
+`portable.py` adds a versioned single-agent invocation/checkpoint contract,
+atomic single-owner JSON persistence and a bounded local backend port. Optional
+native Google ADK/Microsoft hosts run the same offline agent with shared conformance
+tests. There are no live model/QPU connections, full Council runtime, storage
+services, authorization server or executor. See [implemented portability](PORTABILITY.md).
+The target infrastructure below remains a design, not a deployed service.
 
 ## Target components
 
@@ -41,7 +45,8 @@ SDKs belong in future optional integration packages. No SDK is added by this doc
 1. Alpha: local pure-Python objects and deterministic tests, implemented.
 2. M1: local orchestrator plus recorded or explicitly permitted model calls;
    externally effecting tools remain absent. Start by evaluating Google ADK and
-   Microsoft Agent Framework against one conformance suite.
+   Microsoft Agent Framework against one conformance suite. Bounded single-agent
+   hosts now exist; the multi-stage Council orchestrator remains future work.
 3. M2: isolated agent workers, independent gateway, artifact/event store,
    authenticated approvals and secrets restricted to executors.
 4. Research: a bounded simulator adapter; later, an explicitly authorized remote

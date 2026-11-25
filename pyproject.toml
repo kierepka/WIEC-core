@@ -14,6 +14,8 @@ dependencies = []
 
 [project.optional-dependencies]
 dev = ["pytest>=8"]
+adk = ["google-adk==2.15.1"]
+microsoft = ["agent-framework-core==1.26.0"]
 
 [tool.setuptools.packages.find]
 where = ["src"]

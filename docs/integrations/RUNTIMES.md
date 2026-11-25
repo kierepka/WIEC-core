@@ -1,7 +1,9 @@
 # Runtime and agent integration strategy
 
-Status: proposed adapters. No listed framework is installed or integrated by WIEC.
+Status: native offline single-agent ADK and Microsoft hosts implemented;
+other adapters and full Council orchestration remain proposed.
 Documentation reviewed 2026-11-25; pin and test actual SDK releases at implementation.
+See [implemented scope and pinned SDK versions](../PORTABILITY.md).
 
 ## Common requirements
 

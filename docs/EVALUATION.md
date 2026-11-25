@@ -51,6 +51,7 @@ permitted artifacts, seeds/settings, event sequence, raw outputs, validated reco
 costs and adjudications. Recorded replay must rebuild the report without live
 provider calls. Re-running stochastic models/QPUs is replication, not byte-identical replay.
 
-The current CI tests application behavior only. M1 adds contract/protocol tests;
+Current CI tests application behavior and single-agent portability contracts with
+real optional SDK hosts. Full Council protocol tests remain in M1;
 M2 adds gateway/outage/bypass tests; M3 publishes benchmark artifacts and limitations.
 Quantum experiments have [separate acceptance and advantage gates](quantum/EXPERIMENTS.md).

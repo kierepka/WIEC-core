@@ -12,9 +12,12 @@ python -m pytest -q
 python examples/basic_council.py
 ```
 
-Current CI installs the package and runs pytest on Python 3.11. No model keys,
+Current CI tests the dependency-free core on Python 3.11/3.14 and the optional
+native ADK/Microsoft hosts together on Python 3.11. No model keys,
 network requests or QPU account are needed by the example/tests. The alpha has
 no server to deploy and no live Research Council command.
+Run `examples/portable_agent.py` for the implemented offline portability example;
+see [host extras and checkpoint transfer](PORTABILITY.md).
 
 ## Implementing the next milestone
 
